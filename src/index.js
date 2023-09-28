@@ -13,8 +13,8 @@ function logArguments(fn) {
 }
 
 /*Test: */
-function testFunction(a,b,c) {
+const testFunction = (a,b,c) => {
   console.log(a+b+c);
 }
-testFunction = logArguments(testFunction);
-testFunction(1,2,3);
+logArguments(testFunction)(1,2,3,4);
+
